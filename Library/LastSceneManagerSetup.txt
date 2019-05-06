@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AssetStoreStuff/SampleScenes/Scenes/CharacterFirstPerson.unity
+- path: Assets/Scenes/Tasks/Task1.unity
   isLoaded: 1
   isActive: 1
