@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TheSceneAboutAGlassCube.unity
+- path: Assets/AssetStoreStuff/SampleScenes/Scenes/CharacterFirstPerson.unity
   isLoaded: 1
   isActive: 1

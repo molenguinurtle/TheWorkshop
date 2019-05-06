@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+[RequireComponent(typeof(Material))]
 public class DoSomething : MonoBehaviour
 {
 
     public int floatVar = 0;
-    // Alright. Let's make this script change the color of the object it's attached to based off it's distance from
-    void Start()
+    private Material myMaterial;
+    void Awake()
     {
-
+        myMaterial = GetComponent<Renderer>().material;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -21,10 +20,17 @@ public class DoSomething : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Glass")
+        if (collision.transform.CompareTag("Cube"))
         {
-            var myRbody = transform.GetComponent<Rigidbody>();
-            myRbody.AddForce(Vector3.forward * -10, ForceMode.Force);
+            var myColor = myMaterial.color;
+            myColor.r += 1;
+            myMaterial.color = myColor;
+        }
+        if (collision.transform.CompareTag("Sphere"))
+        {
+            var myColor = myMaterial.color;
+            myColor.b += 1;
+            myMaterial.color = myColor;
         }
     }
 }
