@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes1/Tasks/Task4.unity
+- path: Assets/Scenes1/RotateCamera/TestScene.unity
   isLoaded: 1
   isActive: 1
