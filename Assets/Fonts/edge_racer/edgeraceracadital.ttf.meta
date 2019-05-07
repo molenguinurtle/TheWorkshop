@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ee89b4049660a384bb44ff02389e6fb5
+timeCreated: 1540387123
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Edge Racer Academy Italic
+  fontNames:
+  - Edge Racer Academy Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

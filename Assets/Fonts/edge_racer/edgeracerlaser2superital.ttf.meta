@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 06e8455e68a91b440b79bf74c60ca178
+timeCreated: 1540387120
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Edge Racer Laser 2 Super-Italic
+  fontNames:
+  - Edge Racer Laser 2 Super-Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

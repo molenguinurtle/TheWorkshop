@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: adc10010d37d3e7459bb5c6cfd8064da
+timeCreated: 1540387122
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Edge Racer Academy
+  fontNames:
+  - Edge Racer Academy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

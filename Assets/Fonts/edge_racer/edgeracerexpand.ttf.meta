@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 11329212f7d8ae44c9c6d672c83a38f5
+timeCreated: 1540387121
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Edge Racer Expanded
+  fontNames:
+  - Edge Racer Expanded
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
