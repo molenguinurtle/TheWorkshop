@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes1/RotateCamera/TestScene.unity
+- path: Assets/Scenes1/CropScene.unity
   isLoaded: 1
   isActive: 1
