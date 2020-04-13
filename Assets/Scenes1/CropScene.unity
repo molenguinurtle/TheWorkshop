@@ -390,6 +390,11 @@ MonoBehaviour:
   TheInputField: {fileID: 1080471812}
   mySprite: {fileID: 1980433162}
   currentSprites: []
+  currentImages: []
+  LANDSCAPE_WIDTH_CONST: 512
+  LANDSCAPE_HEIGHT_CONST: 512
+  PORTRAIT_WIDTH_CONST: 512
+  PORTRAIT_HEIGHT_CONST: 512
 --- !u!4 &448555135
 Transform:
   m_ObjectHideFlags: 0
@@ -2896,7 +2901,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a06cb7a904e21054bba37624dd31713c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c2b6ab4b95a6ac94bac5931b78c4b1ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
