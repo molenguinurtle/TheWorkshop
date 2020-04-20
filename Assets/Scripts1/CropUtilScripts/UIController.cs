@@ -16,8 +16,12 @@ public class UIController : MonoBehaviour {
 
     public Image mySprite;
     public Sprite[] currentSprites;
-    public Image[] currentImages;
+    public Image[] landscapeImages;
+    public Image[] portraitImages;
+
     private List<Sprite> tempSpriteLst;
+
+    private bool isLandscape;
 
     public int LANDSCAPE_WIDTH_CONST;
     public int LANDSCAPE_HEIGHT_CONST;
@@ -53,12 +57,14 @@ public class UIController : MonoBehaviour {
             //Use Landscape Constants
             width = LANDSCAPE_WIDTH_CONST;
             height = LANDSCAPE_HEIGHT_CONST;
+            isLandscape = true;
         }
         else
         {
             //Use Portrait Constants
             width = PORTRAIT_WIDTH_CONST;
             height = PORTRAIT_HEIGHT_CONST;
+            isLandscape = false;
         }
         //Reset the tempSpriteLst
         tempSpriteLst = new List<Sprite>();
@@ -86,23 +92,25 @@ public class UIController : MonoBehaviour {
 
     }
 
-    //C'est la vie. We're cutting up the Pictures into sprites. Now we just need a collection of Buttons/Images(prolly just Images) that are set up to swap out Sprites painlessly
-    // AKA, AssignSprites will basically be a for loop where we loop thru currentSprites and assign to an Image[x]'s sprite component. See commented out code below
     private void AssignSprites()
     {
         for (int x = 0; x < currentSprites.Length; x++)
         {
-            currentImages[x].sprite = currentSprites[x];
-            currentImages[x].SetNativeSize();
+            if (isLandscape)
+            {
+                landscapeImages[x].sprite = currentSprites[x];
+                landscapeImages[x].SetNativeSize();
+            }
+            else
+            {
+                portraitImages[x].sprite = currentSprites[x];
+                portraitImages[x].SetNativeSize();
+            }
         }
-        // Set the object's texture to show the extracted rectangle.
-        //mySprite.sprite = Sprite.Create(destTex,
-        //                        new Rect(0, 0,
-        //                                  destTex.width,
-        //                                  destTex.height),
-        //                                        new Vector2(0, 0), 100.0f);
-        //mySprite.SetNativeSize();
+
+        mySprite.gameObject.SetActive(false);
     }
+
     public void EnableCropButtonPressed()
     {
         //C'est la vie. Need a couple things here. First, we have to turn off the UI for entering the URL for the image. Then we'll need to turn on 
