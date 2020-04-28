@@ -1576,7 +1576,7 @@ PrefabInstance:
     - target: {fileID: 529072506949963550, guid: cd577741c92d63b419fbb80bf30fb381,
         type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd577741c92d63b419fbb80bf30fb381, type: 3}
