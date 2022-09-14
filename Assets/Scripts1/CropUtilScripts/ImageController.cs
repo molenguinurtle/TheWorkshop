@@ -51,7 +51,7 @@ public class ImageController : MonoBehaviour
         {
             yield return uwr.SendWebRequest();
 
-            if (uwr.isNetworkError || uwr.isHttpError)
+            if (uwr.result == UnityWebRequest.Result.ConnectionError || uwr.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log(uwr.error);
             }
