@@ -8,7 +8,6 @@ public class CodilityTests : MonoBehaviour
 {
     private void Start()
     {
-
         //BinaryGap(75);
         //ShiftArray(new int[] { 5, 6, 7, 8 }, 2);
         //OddIntOut(new int[] { 8, 8, 94, 4, 90, 4, 94, 4, 90 });
@@ -19,6 +18,7 @@ public class CodilityTests : MonoBehaviour
         //FrogRiver(5, new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
         ////FrogRiver(2, new int[] { 1, 1, 1, 1, 1, 1, 1, 1 });
         //SmallestPositiveInt(new int[] { -1, -3, 1, 3 });
+        PassingCars(new[] { 0, 1, 0, 1, 1 });
         //BinaryCounter(3, 7);
         //PairCounter(new int[]{ 3, 5, 6, 3, 3, 5});
         //PairCounter(BigIntArray(90000));
@@ -290,35 +290,50 @@ public class CodilityTests : MonoBehaviour
 
     public int PermutationFinder(int[] A)
     {
+        // Implement your solution here
         List<int> myList = A.OrderBy(x => x).ToList();
         for (int i = 0; i < myList.Count; i++)
         {
-            if (myList[i] != i + 1)
-                return 0;
+            var myNum = myList[i];
+            if (i == 0 && myNum != 1)
+            {
+                return 1;
+            }
+            //[1, 2, 3, 4]
+            if (i < myList.Count -1)
+            {
+                if ((myNum + 1) != myList[i + 1])
+                {
+                    return myNum + 1;
+                }
+            }
+            else
+            {
+                return myNum + 1;
+            }
         }
         return 1;
     }
 
     public int FrogRiver(int X, int[] A)
     {
-        List<int> myList = new List<int>();
-        int[] myArray = new int[X + 1];
+        Dictionary<int, bool> myDict = new Dictionary<int, bool>();
+        var myCount = 0;
         for (int i = 0; i < A.Length; i++)
         {
-            //if (!myList.Contains(A[i]))
-            //{
-            //    myList.Add(A[i]);
-            //    if (myList.Count == X)
-            //        return i;
-            //}
-            myArray[A[i]] = 1;
-            return i;
+            if (myDict.TryAdd(A[i], true))
+            {
+                myCount++;
+                if (myCount == X)
+                    return i;
+            }
         }
-
         return -1;
     }
     public int SmallestPositiveInt(int[] A)
     {
+        //C'est la vie. Sample Input: (new int[] { -1, -3, 1, 3 })
+        // [1, 2, 3]
         int numToReturn = 1;
         List<int> myList = A.OrderBy(x => x).ToList();
         for (int i = 0; i < myList.Count; i++)
@@ -329,6 +344,42 @@ public class CodilityTests : MonoBehaviour
             }
         }
         return numToReturn;
+    }
+    
+    public int PassingCars(int[] A) 
+    {
+        // Implement your solution here
+        int passingCnt = 0;
+        int zeroCnt = 0;
+        for (int i = 0; i < A.Length; i++)
+        {
+            var compCar = A[i];
+            //We only care if the Car is going East
+            if (compCar == 0)
+            {
+                zeroCnt++;
+            }
+            else
+            {
+                if (zeroCnt >0)
+                {
+                    passingCnt += zeroCnt;
+                    if (passingCnt > 1000000000)
+                    {
+                        return -1;
+                    }
+                }
+            }
+        }
+        return passingCnt;
+    }
+
+    public int CountDiv(int A, int B, int K)
+    {
+        //C'est la vie. Gotta work on this one
+        int divCnt = 0;
+        //for (int)
+        return divCnt;
     }
     // Update is called once per frame
     void Update()
